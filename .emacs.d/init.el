@@ -37,6 +37,9 @@
 (setq org-agenda-files (file-expand-wildcards "~/Dropbox/org/*.org"))
 (setq org-mobile-directory "~/Dropbox/MobileOrg")
 
+'(org-refile-targets (quote (("migtd.org" :maxlevel . 2) 
+                             ("algundia.org" :level . 2))))
+
 ; Activate workgroups
 ; https://github.com/tlh/workgroups.el
 (require 'workgroups)
