@@ -12,6 +12,13 @@
 ; Save sessions
 (desktop-save-mode 1)
 
+; Turn on auto-fill-mode
+; http://www.emacswiki.org/emacs/AutoFillMode    
+(add-hook 'text-mode-hook
+              (lambda ()
+                (when (y-or-n-p "Auto Fill mode? ")
+                  (turn-on-auto-fill))))
+
 ; Setup themes
 (require 'color-theme)
 (color-theme-initialize)
