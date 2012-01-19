@@ -29,6 +29,10 @@
 (color-theme-tangotango)
 
 ; Org-mode stuff
+
+(setq org-agenda-files (file-expand-wildcards "~/Dropbox/org/*.org"))
+
+; Set tags
 (setq org-tag-alist 
 '(("@apartamento" . ?a) 
 ("@universidad" . ?u) 
@@ -38,10 +42,15 @@
 ("email" . ?e) 
 ("telefono" . ?t)))
 
+; Set to-do keywords
 (setq org-todo-keywords
        '((sequence "TODO(t)" "WAITING(w@/!)" "STARTED(s)" "|" "DONE(d!)" "CANCELED(c@)")))
 
-(setq org-agenda-files (file-expand-wildcards "~/Dropbox/org/*.org"))
+;; Set to the location of your Org files on your local system
+(setq org-directory "~/Dropbox/org")
+;; Set to the name of the file where new notes will be stored
+(setq org-mobile-inbox-for-pull "~/Dropbox/org/flagged.org")
+;; Setup the mobile directory
 (setq org-mobile-directory "~/Dropbox/MobileOrg")
 
 ;Targets include this file and any file contributing to the agenda - up to 9 levels deep
@@ -79,6 +88,7 @@
 
 ; Activate IDO
 (require 'ido)
+
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
