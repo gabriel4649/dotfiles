@@ -30,6 +30,11 @@
 
 ; Org-mode stuff
 
+; Org-mode key maps
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+
+; Set agenda files
 (setq org-agenda-files (file-expand-wildcards "~/Dropbox/org/*.org"))
 
 ; Set tags
