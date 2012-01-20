@@ -12,6 +12,9 @@
 ; Save sessions
 (desktop-save-mode 1)
 
+; Automatically revert buffers
+(global-auto-revert-mode 1)
+
 ; Setup key for auto-fill-mode
 ; http://www.emacswiki.org/emacs/AutoFillMode    
 (global-set-key (kbd "C-c q") 'auto-fill-mode)
