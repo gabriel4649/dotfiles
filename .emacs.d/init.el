@@ -34,6 +34,11 @@
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 
+; Activate org protocol
+; http://orgmode.org/worg/org-contrib/org-protocol.html
+(server-start)
+(require 'org-protocol)
+
 ; Set agenda files
 (setq org-agenda-files (file-expand-wildcards "~/Dropbox/org/*.org"))
 
