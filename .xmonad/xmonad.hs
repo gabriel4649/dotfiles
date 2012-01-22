@@ -9,7 +9,9 @@ myManageHook = composeAll (
 
 main = xmonad gnomeConfig 
 	{ manageHook = myManageHook 
-	, modMask = mod4Mask
+         , modMask = mod4Mask
+         , focusedBorderColor = "#DD4814" -- Ubuntu orange
 	}
+
 
 
