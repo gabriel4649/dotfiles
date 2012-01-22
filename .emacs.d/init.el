@@ -45,6 +45,7 @@
 ; Set tags
 (setq org-tag-alist 
 '(("@apartamento" . ?a) 
+("@carro" . ?c) 
 ("@universidad" . ?u) 
 ("@pueblo de mayagüez" . ?p) 
 ("@montehiedra" . ?m) 
