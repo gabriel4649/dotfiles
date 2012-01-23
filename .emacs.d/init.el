@@ -64,7 +64,7 @@
        (("w"
          "Default template"
          entry
-         (file+headline "~/org/capture.org" "Notes")
+         (file+headline "~/Dropbox/org/capture.org" "Notes")
          "* %^{Title}\n\n  Source: %u, %c\n\n  %i"
          :empty-lines 1)
         ;; ... more templates here ...
