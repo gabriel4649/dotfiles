@@ -39,8 +39,33 @@
 (server-start)
 (require 'org-protocol)
 
+;; Set to the location of your Org files on your local system
+(setq org-directory "~/Dropbox/org")
+
 ; Set agenda files
 (setq org-agenda-files (file-expand-wildcards "~/Dropbox/org/*.org"))
+
+; Set file for capture mode
+(setq org-default-notes-file "~/Dropbox/org/refile.org")
+
+;; Set to the name of the file where new notes will be stored
+(setq org-mobile-inbox-for-pull "~/Dropbox/org/flagged.org")
+
+;; Setup the mobile directory
+(setq org-mobile-directory "~/Dropbox/MobileOrg")
+
+; Capture templates
+; http://orgmode.org/worg/org-contrib/org-protocol.html#sec-6-1-1
+(setq org-capture-templates
+      (quote
+       (("w"
+         "Default template"
+         entry
+         (file+headline "~/org/capture.org" "Notes")
+         "* %^{Title}\n\n  Source: %u, %c\n\n  %i"
+         :empty-lines 1)
+        ;; ... more templates here ...
+        )))
 
 ; Set tags
 (setq org-tag-alist 
@@ -56,13 +81,6 @@
 ; Set to-do keywords
 (setq org-todo-keywords
        '((sequence "TODO(t)" "WAITING(w@/!)" "STARTED(s)" "|" "DONE(d!)" "CANCELED(c@)")))
-
-;; Set to the location of your Org files on your local system
-(setq org-directory "~/Dropbox/org")
-;; Set to the name of the file where new notes will be stored
-(setq org-mobile-inbox-for-pull "~/Dropbox/org/flagged.org")
-;; Setup the mobile directory
-(setq org-mobile-directory "~/Dropbox/MobileOrg")
 
 ;Targets include this file and any file contributing to the agenda - up to 9 levels deep
 (setq org-refile-targets (quote ((nil :maxlevel . 9)
