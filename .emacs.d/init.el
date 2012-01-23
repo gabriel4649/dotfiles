@@ -46,13 +46,16 @@
 (setq org-agenda-files (file-expand-wildcards "~/Dropbox/org/*.org"))
 
 ; Set file for capture mode
-(setq org-default-notes-file "~/Dropbox/org/refile.org")
+(setq org-default-notes-file "~/Dropbox/org/capture.org")
 
 ;; Set to the name of the file where new notes will be stored
 (setq org-mobile-inbox-for-pull "~/Dropbox/org/flagged.org")
 
 ;; Setup the mobile directory
 (setq org-mobile-directory "~/Dropbox/MobileOrg")
+
+; Capture key
+(define-key global-map "\C-cc" 'org-capture)
 
 ; Capture templates
 ; http://orgmode.org/worg/org-contrib/org-protocol.html#sec-6-1-1
