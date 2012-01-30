@@ -112,6 +112,12 @@
 
 (setq org-refile-target-verify-function 'bh/verify-refile-target)
 
+;; PDFs visited in Org-mode are opened in Evince (and not in the default choice) http://stackoverflow.com/a/8836108/789593
+(add-hook 'org-mode-hook
+      '(lambda ()
+         (delete '("\\.pdf\\'" . default) org-file-apps)
+         (add-to-list 'org-file-apps '("\\.pdf\\'" . "evince %s"))))
+
 ; Activate workgroups
 ; https://github.com/tlh/workgroups.el
 (require 'workgroups)
