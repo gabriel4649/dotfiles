@@ -67,6 +67,12 @@
          (file+headline "~/Dropbox/org/capture.org" "Notes")
          "* %^{Title} %u, %c\n\n  %i"
          :empty-lines 1)
+         
+         ("t" 
+          "TODO"
+	  entry
+	  (file+headline "~/Dropbox/org/migtd.org" "Entrando")
+          "* TODO %^{Brief Description} %^g\n%?\nAdded: %U" )
         ;; ... more templates here ...
         )))
 
