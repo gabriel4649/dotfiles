@@ -79,10 +79,12 @@
 ; Set tags
 (setq org-tag-alist 
 '(("@apartamento" . ?a) 
+("@apartamento steph" ?h)
 ("@carro" . ?v) 
 ("@universidad" . ?u) 
 ("@pueblo de mayagüez" . ?p) 
-("@montehiedra" . ?m) 
+("@san juan" . ?s)
+("@casa" . ?m) 
 ("computadora" . ?c) 
 ("email" . ?e) 
 ("telefono" . ?t)))
