@@ -17,13 +17,11 @@ myManageHook = composeAll (
 
 myWorkspaces = ["1:web","2:emacs","3:chat","4:docs","5","6","7","8","9"]  
 
-modm = mod4Mask -- win key for mod
-
 main = xmonad $ gnomeConfig 
 	{ manageHook = myManageHook 
          , modMask = mod4Mask
          , focusedBorderColor = "#DD4814" -- Ubuntu orange
-	 ,  workspaces = myWorkspaces
+	 , workspaces = myWorkspaces
 	} `additionalKeysP`
         [ ("M-f", goToSelected defaultGSConfig)
            , ("M-s", spawnSelected defaultGSConfig ["emacs","firefox"])
