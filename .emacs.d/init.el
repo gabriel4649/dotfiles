@@ -36,7 +36,6 @@
 
 ; Activate org protocol
 ; http://orgmode.org/worg/org-contrib/org-protocol.html
-(server-start)
 (require 'org-protocol)
 
 ;; Set to the location of your Org files on your local system
