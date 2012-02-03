@@ -1,5 +1,7 @@
 import XMonad
 import XMonad.Config.Gnome
+import XMonad.Actions.GridSelect
+import XMonad.Util.EZConfig
 
 -- Great intro: http://www.linuxandlife.com/2011/11/how-to-configure-xmonad-arch-linux.html
 
@@ -15,15 +17,18 @@ myManageHook = composeAll (
 
 myWorkspaces = ["1:web","2:emacs","3:chat","4:docs","5","6","7","8","9"]  
 
+modm = mod4Mask -- win key for mod
 
-main = xmonad gnomeConfig 
+main = xmonad $ gnomeConfig 
 	{ manageHook = myManageHook 
          , modMask = mod4Mask
          , focusedBorderColor = "#DD4814" -- Ubuntu orange
 	 ,  workspaces = myWorkspaces
-	}
-
-
+	} `additionalKeysP`
+        [ ("M-f", goToSelected defaultGSConfig)
+           , ("M-s", spawnSelected defaultGSConfig ["emacs","firefox"])
+           -- Parece que no esta disponible , ("M-w",  gridselectWorkspace defaultGSConfig)
+        ]
 
 
 
