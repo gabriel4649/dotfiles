@@ -153,7 +153,7 @@
 ; Set tags
 (setq org-tag-alist 
 '(("@apartamento" . ?a) 
-("@apartamento steph" ?h)
+("@apartamento steph" . ?h)
 ("@carro" . ?v) 
 ("@universidad" . ?u) 
 ("@pueblo de mayagüez" . ?p) 
