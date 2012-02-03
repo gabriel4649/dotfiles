@@ -11,7 +11,7 @@ myManageHook = composeAll (
     , className =? "Unity-2d-launcher" --> doIgnore
     , className =? "Gimp" --> doFloat
     , className =? "Empathy" --> doShift "3:chat"
-    , className =? "Emacs" --> doShift "2:emacs"
+    -- , className =? "Emacs" --> doShift "2:emacs"
     , className =? "Firefox" --> doShift "1:web"
     ])
 
