@@ -1,7 +1,8 @@
 import XMonad
 import XMonad.Config.Gnome
-import XMonad.Actions.GridSelect
 import XMonad.Util.EZConfig
+import XMonad.Actions.GridSelect
+import XMonad.Actions.CycleWS
 
 -- Great intro: http://www.linuxandlife.com/2011/11/how-to-configure-xmonad-arch-linux.html
 
@@ -26,6 +27,8 @@ main = xmonad $ gnomeConfig
         [ ("M-f", goToSelected defaultGSConfig)
            , ("M-s", spawnSelected defaultGSConfig ["emacs","firefox"])
            -- Parece que no esta disponible , ("M-w",  gridselectWorkspace defaultGSConfig)
+           ,("M-<L>", prevWS)
+           ,("M-<R>", nextWS) 
         ]
 
 
