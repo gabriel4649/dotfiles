@@ -10,8 +10,8 @@ myManageHook = composeAll (
     [ manageHook gnomeConfig
     , className =? "Unity-2d-panel" --> doIgnore
     , className =? "Unity-2d-launcher" --> doIgnore
-    , className =? "Gimp" --> doFloat
-    , className =? "Empathy" --> doShift "3:chat"
+    , className =? "Gimp-2.6" --> doFloat
+    -- , className =? "Empathy" --> doShift "3:chat"
     -- , className =? "Emacs" --> doShift "2:emacs"
     -- , className =? "Firefox" --> doShift "1:web"
     ])
