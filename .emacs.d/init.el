@@ -13,6 +13,11 @@
 ; http://scottfrazersblog.blogspot.com/2009/12/emacs-named-desktop-sessions.html
 (require 'desktop)
 
+; Mercurial mode a la maggit
+; https://github.com/ananthakumaran/monky
+(require 'monky)
+(setq monky-process-type 'cmdserver)
+
 (defvar my-desktop-session-dir
   (concat (getenv "HOME") "/.emacs.d/desktop-sessions/")
   "*Directory to save desktop sessions in")
