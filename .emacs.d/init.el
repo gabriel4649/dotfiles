@@ -18,6 +18,11 @@
 (require 'monky)
 (setq monky-process-type 'cmdserver)
 
+; Enable tomatinho
+; https://github.com/konr/tomatinho/
+(require 'tomatinho)
+(global-set-key (kbd "<f12>") 'tomatinho)
+
 (defvar my-desktop-session-dir
   (concat (getenv "HOME") "/.emacs.d/desktop-sessions/")
   "*Directory to save desktop sessions in")
