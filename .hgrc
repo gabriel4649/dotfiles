@@ -1,2 +1,3 @@
 [ui]
 username = Gabriel J. Pérez Irizarry <gabrieljoel@gmail.com>
+ssh = ssh -C
