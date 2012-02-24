@@ -9,19 +9,14 @@
                  (not (equal f ".")))
         (add-to-list 'load-path name)))))
 
-; Desktop session management
-; http://scottfrazersblog.blogspot.com/2009/12/emacs-named-desktop-sessions.html
-(require 'desktop)
-
 ; Mercurial mode a la maggit
 ; https://github.com/ananthakumaran/monky
 (require 'monky)
 (setq monky-process-type 'cmdserver)
 
-; Enable tomatinho
-; https://github.com/konr/tomatinho/
-(require 'tomatinho)
-(global-set-key (kbd "<f12>") 'tomatinho)
+; Enable pomodoro.el
+; https://github.com/docgnome/pomodoro.el
+(require 'pomodoro)
 
 (defvar my-desktop-session-dir
   (concat (getenv "HOME") "/.emacs.d/desktop-sessions/")
@@ -29,6 +24,10 @@
 
 (defvar my-desktop-session-name-hist nil
   "Desktop session name history")
+
+; Desktop session management
+; http://scottfrazersblog.blogspot.com/2009/12/emacs-named-desktop-sessions.html
+(require 'desktop)
 
 (defun my-desktop-save (&optional name)
   "Save desktop by name."
@@ -146,7 +145,7 @@
 (setq org-capture-templates
       (quote
        (("w"
-         "Default template"
+         "Web"
          entry
          (file+headline "~/Dropbox/org/capture.org" "Notes")
          "* %^{Title} %u, %c\n\n  %i"
@@ -157,7 +156,14 @@
 	  entry
 	  (file+headline "~/Dropbox/org/migtd.org" "Entrando")
           "* TODO %^{Brief Description} %^g\n%?\nAdded: %U" )
+
+         ("d" 
+          "diario"
+	  entry
+	  (file+headline "~/Dropbox/org/diario.org" "Entradas")
+          "* %^{Title} \nAdded: %U" )
         ;; ... more templates here ...
+
         )))
 
 ; Set tags
@@ -224,7 +230,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(ido-mode (quote both) nil (ido)))
+ '(ido-mode (quote both) nil (ido))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
