@@ -26,7 +26,7 @@ main = xmonad $ gnomeConfig
 	} `additionalKeysP`
         [ ("M-f", goToSelected defaultGSConfig)
            , ("M-s", spawnSelected defaultGSConfig ["emacs","firefox"])
-           -- Parece que no esta disponible , ("M-w",  gridselectWorkspace defaultGSConfig)
+           -- Parece que no esta disponible  ("M-w",  gridselectWorkspace defaultGSConfig)
            ,("M-<L>", prevWS)
            ,("M-<R>", nextWS) 
         ]
