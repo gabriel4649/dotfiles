@@ -150,8 +150,8 @@
 ; http://orgmode.org/worg/org-contrib/org-protocol.html#sec-6-1-1
 (setq org-capture-templates
       (quote
-       (("w"
-         "Web"
+       (("i"
+         "Internet"
          entry
          (file+headline "~/Dropbox/org/capture.org" "Notes")
          "* %^{Title} %u, %c\n\n  %i"
@@ -162,6 +162,12 @@
 	  entry
 	  (file+headline "~/Dropbox/org/migtd.org" "Entrando")
           "* TODO %^{Brief Description} %^g\n%?\nAdded: %U" )
+
+         ("w" 
+          "WAITING"
+	  entry
+	  (file+headline "~/Dropbox/org/migtd.org" "Esperando")
+          "* WAITING %^{Brief Description} %^g\n%?\nAdded: %U" )
 
          ("d" 
           "diario"
