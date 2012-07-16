@@ -9,6 +9,7 @@
                  (not (equal f ".")))
         (add-to-list 'load-path name)))))
 
+
 ; Mercurial mode a la maggit
 ; https://github.com/ananthakumaran/monky
 (require 'monky)
@@ -123,6 +124,11 @@
 ; Org-mode key maps
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
+
+; Add hooks to automatically push and pull for mobile org
+; http://stackoverflow.com/questions/8432108/how-to-automatically-do-org-mobile-push-org-mobile-pull-in-emacs
+(add-hook 'after-init-hook 'org-mobile-pull)
+(add-hook 'kill-emacs-hook 'org-mobile-push) 
 
 ; Activate org protocol
 ; http://orgmode.org/worg/org-contrib/org-protocol.html
