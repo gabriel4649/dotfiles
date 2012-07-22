@@ -135,19 +135,19 @@
 (require 'org-protocol)
 
 ;; Set to the location of your Org files on your local system
-(setq org-directory "~/Dropbox/org")
+(setq org-directory "~/Ubuntu One/org")
 
 ; Set agenda files
-(setq org-agenda-files (file-expand-wildcards "~/Dropbox/org/*.org"))
+(setq org-agenda-files (file-expand-wildcards "~/Ubuntu One/org/*.org"))
 
 ; Set file for capture mode
-(setq org-default-notes-file "~/Dropbox/org/capture.org")
+(setq org-default-notes-file "~/Ubuntu One/org/capture.org")
 
 ;; Set to the name of the file where new notes will be stored
-(setq org-mobile-inbox-for-pull "~/Dropbox/org/flagged.org")
+(setq org-mobile-inbox-for-pull "~/Ubuntu One/org/flagged.org")
 
 ;; Setup the mobile directory
-(setq org-mobile-directory "~/Dropbox/MobileOrg")
+(setq org-mobile-directory "~/Ubuntu One/MobileOrg")
 
 ; Capture key
 (define-key global-map "\C-cc" 'org-capture)
@@ -159,26 +159,26 @@
        (("i"
          "Internet"
          entry
-         (file+headline "~/Dropbox/org/capture.org" "Notes")
+         (file+headline "~/Ubuntu One/org/capture.org" "Notes")
          "* %^{Title} %u, %c\n\n  %i"
          :empty-lines 1)
          
          ("t" 
           "TODO"
 	  entry
-	  (file+headline "~/Dropbox/org/migtd.org" "Entrando")
+	  (file+headline "~/Ubuntu One/org/migtd.org" "Entrando")
           "* TODO %^{Brief Description} %^g\n%?\nAdded: %U" )
 
          ("w" 
           "WAITING"
 	  entry
-	  (file+headline "~/Dropbox/org/migtd.org" "Esperando")
+	  (file+headline "~/Ubuntu One/org/migtd.org" "Esperando")
           "* WAITING %^{Brief Description} %^g\n%?\nAdded: %U" )
 
          ("d" 
           "diario"
 	  entry
-	  (file+headline "~/Dropbox/org/diario.org" "Entradas")
+	  (file+headline "~/Ubuntu One/org/diario.org" "Entradas")
           "* %^{Title} \nAdded: %U" )
         ;; ... more templates here ...
 
@@ -248,7 +248,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(org-agenda-files (quote ("~/Dropbox/org/algundia.org" "~/Dropbox/org/capture.org" "~/Dropbox/org/diario.org" "~/Dropbox/org/flagged.org" "~/Dropbox/org/habitos.org" "~/Dropbox/org/libreta.org" "~/Dropbox/org/migtd.org" "~/Dropbox/org/recordatorios.org"))))
+ '(org-agenda-files (quote ("~/Ubuntu One/org/algundia.org" "~/Ubuntu One/org/capture.org" "~/Ubuntu One/org/diario.org" "~/Ubuntu One/org/flagged.org" "~/Ubuntu One/org/habitos.org" "~/Ubuntu One/org/libreta.org" "~/Ubuntu One/org/migtd.org" "~/Ubuntu One/org/recordatorios.org"))))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
