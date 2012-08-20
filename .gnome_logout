@@ -1,2 +1,2 @@
-#!/bin/bash
-emacsclient -e "(save-buffers-kill-emacs)"
+#!/bin/sh
+emacsclient -e "(kill-emacs)"
