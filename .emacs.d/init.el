@@ -187,10 +187,9 @@
 ; Set tags
 (setq org-tag-alist 
 '(("@apartamento" . ?a) 
-("@apartamento steph" . ?h)
 ("@carro" . ?v) 
 ("@universidad" . ?u) 
-("@pueblo de mayagüez" . ?p) 
+("@downtown" . ?d) 
 ("@san juan" . ?s)
 ("@casa" . ?m) 
 ("computadora" . ?c) 
