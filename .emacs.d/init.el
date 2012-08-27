@@ -193,6 +193,7 @@
 ("@san juan" . ?s)
 ("@casa" . ?m) 
 ("computadora" . ?c) 
+("iPad" . ?i) 
 ("email" . ?e) 
 ("telefono" . ?t)))
 
