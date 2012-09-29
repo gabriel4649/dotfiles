@@ -9,11 +9,24 @@
                  (not (equal f ".")))
         (add-to-list 'load-path name)))))
 
+; Add Marmalade repo
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/") t)
 
 ; Mercurial mode a la maggit
 ; https://github.com/ananthakumaran/monky
 (require 'monky)
 (setq monky-process-type 'cmdserver)
+
+; Activate IDO
+(require 'ido)
+(ido-mode t)
+
+; Use IDO for both buffer and file completion and ido-everywhere to t
+(setq org-completion-use-ido t)
+(setq ido-everywhere t)
+(setq ido-max-directory-size 100000)
+(ido-mode (quote both))
 
 ; Enable pomodoro.el
 ; https://github.com/docgnome/pomodoro.el
@@ -208,12 +221,6 @@
 ; Allow refile to create parent tasks with confirmation
 (setq org-refile-allow-creating-parent-nodes (quote confirm))
 
-; Use IDO for both buffer and file completion and ido-everywhere to t
-(setq org-completion-use-ido t)
-(setq ido-everywhere t)
-(setq ido-max-directory-size 100000)
-(ido-mode (quote both))
-
 ;;;; Refile settings
 ; Exclude DONE state tasks from refile targets
 (defun bh/verify-refile-target ()
@@ -233,9 +240,6 @@
 (require 'workgroups)
 (workgroups-mode 1)
 (wg-load "~/.emacs.d/workgroups")
-
-; Activate IDO
-(require 'ido)
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
