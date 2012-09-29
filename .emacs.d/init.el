@@ -9,6 +9,23 @@
                  (not (equal f ".")))
         (add-to-list 'load-path name)))))
 
+; Activate IDO
+(require 'ido)
+(ido-mode t)
+
+; Setup theme
+(load-theme 'tango-dark t)
+
+; Use IDO for both buffer and file completion and ido-everywhere to t
+(setq org-completion-use-ido t)
+(setq ido-everywhere t)
+(setq ido-max-directory-size 100000)
+(ido-mode (quote both))
+
+; Activate ELPA
+(require 'package)
+(package-initialize)
+
 ; Add Marmalade repo
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
@@ -17,16 +34,6 @@
 ; https://github.com/ananthakumaran/monky
 (require 'monky)
 (setq monky-process-type 'cmdserver)
-
-; Activate IDO
-(require 'ido)
-(ido-mode t)
-
-; Use IDO for both buffer and file completion and ido-everywhere to t
-(setq org-completion-use-ido t)
-(setq ido-everywhere t)
-(setq ido-max-directory-size 100000)
-(ido-mode (quote both))
 
 ; Enable pomodoro.el
 ; https://github.com/docgnome/pomodoro.el
@@ -122,9 +129,6 @@
 (global-set-key [(shift delete)] 'clipboard-kill-region)
 (global-set-key [(control insert)] 'clipboard-kill-ring-save)
 (global-set-key [(shift insert)] 'clipboard-yank)
-
-; Setup theme
-(load-theme 'theme-name tango-dark)
 
 ; Org-mode stuff
 
