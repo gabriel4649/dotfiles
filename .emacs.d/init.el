@@ -110,14 +110,8 @@
 (global-set-key [(control insert)] 'clipboard-kill-ring-save)
 (global-set-key [(shift insert)] 'clipboard-yank)
 
-; Setup themes
-(require 'color-theme)
-(color-theme-initialize)
-
-; Setup tango tango theme
-; http://blog.nozav.org/post/2010/07/12/Updated-tangotango-emacs-color-theme
-(require 'color-theme-tangotango)
-(color-theme-tangotango)
+; Setup theme
+(load-theme 'theme-name tango-dark)
 
 ; Org-mode stuff
 
