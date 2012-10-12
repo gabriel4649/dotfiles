@@ -28,7 +28,16 @@
 
 ; Add Marmalade repo
 (add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+             '("marmalade" . "http://marmalade-repo.org/packages/") 
+
+; Activate Multiple Cursors
+; https://github.com/magnars/multiple-cursors.el
+(require 'multiple-cursors) 
+; Setup keybindings for multiple-cursors
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 ; Mercurial mode a la maggit
 ; https://github.com/ananthakumaran/monky
