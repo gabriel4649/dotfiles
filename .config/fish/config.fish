@@ -1,3 +1,5 @@
+set PATH ~/frameworks/play $PATH
+
 function resume
      ssh climatewarrior_gabrieljperez@ssh.phx.nearlyfreespeech.net 
 end
