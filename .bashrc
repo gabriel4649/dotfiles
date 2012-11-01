@@ -111,5 +111,3 @@ export PATH=${PATH}:~/android-sdk-linux/platform-tools
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# export MercurialHooks="~/.hg/hooks"
-
