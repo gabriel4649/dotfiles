@@ -13,6 +13,10 @@
 (require 'ido)
 (ido-mode t)
 
+; Activate org-bullets
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
 ; Setup theme
 (load-theme 'tango-dark t)
 
@@ -21,6 +25,9 @@
 (setq ido-everywhere t)
 (setq ido-max-directory-size 100000)
 (ido-mode (quote both))
+
+; Enable line number display
+(global-linum-mode t)
 
 ; Activate ELPA
 (require 'package)
