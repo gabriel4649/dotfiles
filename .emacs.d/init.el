@@ -20,6 +20,10 @@
 ; http://www.emacswiki.org/emacs/MiniMap
 (require 'minimap)
 
+; Activate zencoding
+; https://github.com/rooney/zencoding
+(require 'zencoding-mode)
+
 ; Activate org-bullets
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
