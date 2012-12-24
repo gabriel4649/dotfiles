@@ -16,6 +16,10 @@
 (require 'ido)
 (ido-mode t)
 
+; Activate minimap
+; http://www.emacswiki.org/emacs/MiniMap
+(require 'minimap)
+
 ; Activate org-bullets
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
