@@ -1,4 +1,3 @@
-
 ; Add extra emacs modules to load path
 ; http://stackoverflow.com/questions/221365/emacs-lisp-how-to-add-a-folder-and-all-its-first-level-sub-folders-to-the-load
 (let ((base "~/.emacs.d/elisp"))
@@ -23,6 +22,11 @@
 ; Activate zencoding
 ; https://github.com/rooney/zencoding
 (require 'zencoding-mode)
+(add-hook 'sgml-mode-hook 'zencoding-mode) ;; Auto-start on any markup modes
+
+; Activate lorem-ipsum
+; http://www.emacswiki.org/emacs/LoremIpsum
+(require 'lorem-ipsum)
 
 ; Activate org-bullets
 (require 'org-bullets)
