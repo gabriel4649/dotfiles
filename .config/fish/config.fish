@@ -11,3 +11,9 @@ end
 function emacs
 	emacsclient -t $argv
 end 
+
+# Fix for fish in emacs
+# https://github.com/fish-shell/fish-shell/issues/107
+function fish_title
+  true
+end
