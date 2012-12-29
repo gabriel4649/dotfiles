@@ -1,3 +1,11 @@
+; Activate ELPA
+(require 'package)
+(package-initialize)
+
+; Add Marmalade repo
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+
 ; Add extra emacs modules to load path
 ; http://stackoverflow.com/questions/221365/emacs-lisp-how-to-add-a-folder-and-all-its-first-level-sub-folders-to-the-load
 (let ((base "~/.emacs.d/elisp"))
@@ -8,8 +16,6 @@
                  (not (equal f ".."))
                  (not (equal f ".")))
         (add-to-list 'load-path name)))))
-
-
 
 ; Activate IDO
 (require 'ido)
@@ -22,7 +28,7 @@
 ; Activate zencoding
 ; https://github.com/rooney/zencoding
 (require 'zencoding-mode)
-(add-hook 'sgml-mode-hook 'zencoding-mode) ;; Auto-start on any markup modes
+;(add-hook 'sgml-mode-hook 'zencoding-mode) ;; Auto-start on any markup modes
 
 ; Activate lorem-ipsum
 ; http://www.emacswiki.org/emacs/LoremIpsum
@@ -43,14 +49,6 @@
 
 ; Enable line number display
 (global-linum-mode t)
-
-; Activate ELPA
-(require 'package)
-(package-initialize)
-
-; Add Marmalade repo
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 ; Activate Multiple Cursors
 ; https://github.com/magnars/multiple-cursors.el
