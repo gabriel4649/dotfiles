@@ -38,6 +38,53 @@
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
+; Auto org-mobile push https://gist.github.com/mrvdb/3111823/download#
+;; Show a notification when a push has been completed
+(require 'notifications)
+(defun notify-push (result)
+(notifications-notify
+:title "Push complete"
+:body (format "Org-mobile-push: %s" result)
+)
+)
+ 
+;; Fork the work of pushing to mobile
+(require 'async)
+(defun fork-org-push-mobile ()
+(async-start
+;; What to do in the child process
+`(lambda ()
+,(async-inject-variables "org-\\(mobile-\\|directory\\)")
+(org-mobile-push))
+; What to do when it finishes
+(lambda (result)
+(notify-push result))))
+ 
+;; Define a timer variable
+(defvar org-mobile-push-timer nil
+"Timer that `org-mobile-push-timer' used to reschedule itself, or nil.")
+ 
+;; Push to mobile when the idle timer runs out
+(defun org-mobile-push-with-delay (secs)
+(when org-mobile-push-timer
+(cancel-timer org-mobile-push-timer))
+(setq org-mobile-push-timer
+(run-with-idle-timer
+(* 1 secs) nil 'fork-org-push-mobile)))
+ 
+;; After saving files, start a 30 seconds idle timer after which we
+;; are going to push
+(add-hook 'after-save-hook
+(lambda ()
+(when (eq major-mode 'org-mode)
+(dolist (file (org-mobile-files-alist))
+(if (string= (expand-file-name (car file)) (buffer-file-name))
+(org-mobile-push-with-delay 30)))
+)))
+ 
+;; At least run it once a day, but no need for a delay this time
+(run-at-time "00:05" 86400 '(lambda () (org-mobile-push-with-delay 1)))
+
 ; Setup theme
 (load-theme 'tango-dark t)
 
@@ -181,11 +228,6 @@
 ; Org-mode key maps
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
-
-; Add hooks to automatically push and pull for mobile org
-; http://stackoverflow.com/questions/8432108/how-to-automatically-do-org-mobile-push-org-mobile-pull-in-emacs
-(add-hook 'after-init-hook 'org-mobile-pull)
-(add-hook 'kill-emacs-hook 'org-mobile-push) 
 
 ; Activate org protocol
 ; http://orgmode.org/worg/org-contrib/org-protocol.html
