@@ -34,6 +34,14 @@
 ; http://www.emacswiki.org/emacs/LoremIpsum
 (require 'lorem-ipsum)
 
+; Remove scrollbar
+; http://emacs-fu.blogspot.com/2009/12/scrolling.html
+(set-scroll-bar-mode nil)
+
+; Remove the toolbar
+; http://superuser.com/questions/127420/how-can-i-hide-the-tool-bar-in-emacs-persistently
+(tool-bar-mode -1)
+
 ; Activate org-bullets
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
@@ -42,46 +50,47 @@
 ;; Show a notification when a push has been completed
 (require 'notifications)
 (defun notify-push (result)
-(notifications-notify
-:title "Push complete"
-:body (format "Org-mobile-push: %s" result)
+  (notifications-notify
+   :title "Push complete"
+   :body  (format "Org-mobile-push: %s" result)
+  )
 )
-)
- 
+
 ;; Fork the work of pushing to mobile
-(require 'async)
+(require 'async) 
 (defun fork-org-push-mobile ()
-(async-start
-;; What to do in the child process
-`(lambda ()
-,(async-inject-variables "org-\\(mobile-\\|directory\\)")
-(org-mobile-push))
-; What to do when it finishes
-(lambda (result)
-(notify-push result))))
- 
+  (async-start
+   ;; What to do in the child process
+   `(lambda ()
+      ,(async-inject-variables "org-\\(mobile-\\|directory\\)")
+      (org-mobile-push))
+   
+   ; What to do when it finishes
+   (lambda (result)
+     (notify-push result))))
+
 ;; Define a timer variable
 (defvar org-mobile-push-timer nil
-"Timer that `org-mobile-push-timer' used to reschedule itself, or nil.")
- 
+  "Timer that `org-mobile-push-timer' used to reschedule itself, or nil.")
+
 ;; Push to mobile when the idle timer runs out
 (defun org-mobile-push-with-delay (secs)
-(when org-mobile-push-timer
-(cancel-timer org-mobile-push-timer))
-(setq org-mobile-push-timer
-(run-with-idle-timer
-(* 1 secs) nil 'fork-org-push-mobile)))
- 
+  (when org-mobile-push-timer
+    (cancel-timer org-mobile-push-timer))
+  (setq org-mobile-push-timer
+        (run-with-idle-timer
+         (* 1 secs) nil 'fork-org-push-mobile)))
+
 ;; After saving files, start a 30 seconds idle timer after which we
 ;; are going to push
-(add-hook 'after-save-hook
-(lambda ()
-(when (eq major-mode 'org-mode)
-(dolist (file (org-mobile-files-alist))
-(if (string= (expand-file-name (car file)) (buffer-file-name))
-(org-mobile-push-with-delay 30)))
-)))
- 
+(add-hook 'after-save-hook 
+ (lambda () 
+   (when (eq major-mode 'org-mode)
+     (dolist (file (org-mobile-files-alist))
+       (if (string= (expand-file-name (car file)) (buffer-file-name))
+           (org-mobile-push-with-delay 30)))
+   )))
+
 ;; At least run it once a day, but no need for a delay this time
 (run-at-time "00:05" 86400 '(lambda () (org-mobile-push-with-delay 1)))
 
