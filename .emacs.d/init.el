@@ -83,14 +83,14 @@
 
 ;; After saving files, start a 30 seconds idle timer after which we
 ;; are going to push
-(add-hook 'after-save-hook 
- (lambda () 
-   (when (eq major-mode 'org-mode)
-     (dolist (file (org-mobile-files-alist))
-       (if (string= (expand-file-name (car file)) (buffer-file-name))
-           (org-mobile-push-with-delay 30)))
-   )))
-
+;; (add-hook 'after-save-hook
+;; (lambda ()
+;; (when (eq major-mode 'org-mode)
+;; (dolist (file (org-mobile-files-alist))
+;; (if (string= (expand-file-name (car file)) (buffer-file-name))
+;; (org-mobile-push-with-delay 30)))
+;; )))
+ 
 ;; At least run it once a day, but no need for a delay this time
 (run-at-time "00:05" 86400 '(lambda () (org-mobile-push-with-delay 1)))
 
