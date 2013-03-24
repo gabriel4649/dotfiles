@@ -245,6 +245,11 @@
 (add-hook 'kill-emacs-hook 'my-desktop-kill-emacs-hook)
 #+end_src
 
+* Arduino setup
+#+begin_src emacs-lisp
+(setq auto-mode-alist (cons '("\\.\\(pde\\|ino\\)$" . arduino-mode) auto-mode-alist))
+(autoload 'arduino-mode "arduino-mode" "Arduino editing mode." t)
+#+end_src
 * Python setup 
 #+begin_src emacs-lisp
 ; Python stuff
