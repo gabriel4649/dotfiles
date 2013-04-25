@@ -1,0 +1,7 @@
+[user]
+	email = gabrieljoel@gmail.com
+	name = Gabriel J. Pérez Irizarry
+[diff]
+	external = /home/climatewarrior/.diff.py
+[push]
+	default = simple
