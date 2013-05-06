@@ -7,3 +7,5 @@
 
 ;; use soothe as the default theme
 (require 'soothe-theme)
+
+(provide 'appearance)

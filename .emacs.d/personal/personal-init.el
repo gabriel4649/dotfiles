@@ -9,7 +9,6 @@
                  (not (equal f ".")))
         (add-to-list 'load-path name)))))
 
-
 ;; Add key-binding for auto-fill-mode
 ;; http://emacswiki.org/emacs/AutoFillMode
 (global-set-key (kbd "C-c q") 'auto-fill-mode)
@@ -105,3 +104,5 @@
 (autoload 'jedi:setup "jedi" nil t)
 (setq jedi:setup-keys t)
 (add-hook 'python-mode-hook 'jedi:setup)
+
+(provide 'personal-init)

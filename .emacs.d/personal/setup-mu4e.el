@@ -23,6 +23,9 @@
 ;; allow for updating mail using 'U' in the main view:
 (setq mu4e-get-mail-command "offlineimap")
 
+;; http://www.djcbsoftware.nl/code/mu/mu4e/Displaying-rich_002dtext-messages.html
+(setq mu4e-html2text-command "html2text -utf8 -width 72")
+
 ;; Try to display images in mu4e
 (setq
  mu4e-view-show-images t
@@ -42,7 +45,12 @@
       smtpmail-stream-type 'starttls
       smtpmail-default-smtp-server "smtp.gmail.com"
       smtpmail-smtp-server "smtp.gmail.com"
-      smtpmail-smtp-service 587)
+      smtpmail-smtp-service 587
+
+      ;; if you need offline mode, set these -- and create the queue dir
+      ;; with 'mu mkdir', i.e.. mu mkdir /home/user/Maildir/queue
+      smtpmail-queue-mail  nil
+      smtpmail-queue-dir  "~/Maildir/queue/cur")
 
 ;; don't keep message buffers around
 (setq message-kill-buffer-on-exit t)
@@ -51,5 +59,7 @@
  mu4e-get-mail-command "offlineimap"   ;; or fetchmail, or ...
  mu4e-update-interval 300)             ;; update every 5 minutes
 
-;; Mu4e
+;; Mu4e key binding
 (global-set-key (kbd "C-x M") 'mu4e)
+
+(provide 'setup-mu4e)

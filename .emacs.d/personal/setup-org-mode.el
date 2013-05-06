@@ -153,3 +153,5 @@
 
   ;; At least run it once a day, but no need for a delay this time
   ;; (run-at-time "00:05" 86400 '(lambda () (org-mobile-push-with-delay 1)))
+
+(provide 'setup-org-mode)
