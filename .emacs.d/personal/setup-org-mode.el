@@ -147,4 +147,12 @@
 (defvar monitor-timer (install-monitor (concat org-mobile-directory "/mobileorg.org") 30)
   "Check if file changed every 30 s.")
 
+;; Octopress stuff
+(require 'org-octopress)
+(setq org-octopress-directory-top       "~/coding/octopress/source")
+(setq org-octopress-directory-posts     "~/coding/octopress/source/_posts")
+(setq org-octopress-directory-org-top   "~/coding/octopress/source")
+(setq org-octopress-directory-org-posts "~/coding/octopress/source/blog")
+(setq org-octopress-setup-file          "~/coding/octopress/setupfile.org")
+
 (provide 'setup-org-mode)
