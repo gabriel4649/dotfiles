@@ -6,6 +6,9 @@
 (global-linum-mode t)
 
 ;; use soothe as the default theme
-(require 'soothe-theme)
+;(require 'soothe-theme)
+
+;; Use Solarized light as the default theme
+(load-theme 'solarized-light t)
 
 (provide 'appearance)
