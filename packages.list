@@ -1,0 +1,57 @@
+################################################################################
+#
+# cleanstart-packages.list.sh
+# by silverwav - OpenPGP key:03187548 15 Apr 2009
+#
+# Any line starting with a # is ignored as are Blank lines.
+# Any other lines, the first word is taken as the package name.
+#
+################################################################################
+ 
+# Add Repositories before you start
+# Add medibuntu.org repo 1st!
+# sudo wget http://www.medibuntu.org/sources.list.d/lucid.list --output-document=/etc/apt/sources.list.d/medibuntu.list
+# sudo apt-get update && sudo apt-get install medibuntu-keyring && sudo apt-get update
+#
+ 
+#*** Extras
+ 
+#***Prefernces
+ 
+#***Administration
+ 
+#***Accessories
+ 
+#***Accessories - Search
+ 
+#***Accessories - Text
+ 
+#***Games
+ 
+#***Graphics
+gimp - The GNU Image Manipulation Program
+inkscape - vector-based drawing program
+ 
+##***Internet
+chromium-browser - Chromium browser
+
+#***SABnzb+
+ 
+#***Office
+ 
+#***Programming
+meld - graphical tool to diff and merge files
+ 
+#***Sound & Video
+#Add medibuntu.org repo 1st!
+ 
+#***Sound & Video - Codecs
+ 
+#***Sound & Video - Player
+vlc - multimedia player and streamer
+ 
+#***Sound & Video - DVD
+ 
+#***Sound & Video - Sound Tools
+ 
+#***System Tools
