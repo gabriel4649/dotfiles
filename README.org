@@ -1,0 +1,7 @@
+* My Awesome Personal Configuration
+
+Hopefully this will be use of somebody. This is my attempt at being
+able to clone this repository, run a script and being able to have a
+fully working system that is complete customized for my
+productivity. This is not meant to be generic at all. It is only meant
+to work for my favorite weapons in battle, mainly Ubuntu and Emacs.
