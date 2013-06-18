@@ -25,6 +25,10 @@
 #***Accessories - Search
  
 #***Accessories - Text
+
+#***Email 
+mu4e - e-mail client for Emacs based on mu (maildir-utils)
+offlineimap - IMAP/Maildir synchronization and reader support
  
 #***Games
  
@@ -41,6 +45,9 @@ chromium-browser - Chromium browser
  
 #***Programming
 meld - graphical tool to diff and merge files
+
+#***Python Programming Language
+pylint - python code static checker and UML diagram generator
  
 #***Sound & Video
 #Add medibuntu.org repo 1st!
