@@ -1,3 +1,6 @@
+;; Take care of extra dependencies
+(prelude-ensure-module-deps '(slime))
+
 ;; Slime js
 (add-to-list 'load-path "~/.npm/swank-js/0.0.5/package/")
 (slime-setup '(slime-js slime-repl))
