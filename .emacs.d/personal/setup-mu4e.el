@@ -1,4 +1,4 @@
-(require 'mu4e)
+(if (featurep 'mu4e) (
 ;; default
 ;; (setq mu4e-maildir "~/Maildir")
 
@@ -83,5 +83,5 @@
 
 (add-to-list 'mu4e-view-actions
              '("View in browser" . mu4e-msgv-action-view-in-browser) t)
-
 (provide 'setup-mu4e)
+))
