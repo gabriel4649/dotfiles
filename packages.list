@@ -26,6 +26,9 @@
  
 #***Accessories - Text
 
+#***Development
+slime - Superior LISP Interaction Mode for Emacs
+
 #***Email 
 mu4e - e-mail client for Emacs based on mu (maildir-utils)
 offlineimap - IMAP/Maildir synchronization and reader support
@@ -62,3 +65,6 @@ vlc - multimedia player and streamer
 #***Sound & Video - Sound Tools
  
 #***System Tools
+
+#***World Wide Web
+npm - package manager for Node.js
