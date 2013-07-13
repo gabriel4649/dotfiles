@@ -1,6 +1,6 @@
 (if (featurep 'mu4e) (
 ;; default
-;; (setq mu4e-maildir "~/Maildir")
+(setq mu4e-maildir "~/Maildir")
 
 (setq mu4e-drafts-folder "/[Gmail].Drafts")
 (setq mu4e-sent-folder   "/[Gmail].Sent Mail")
@@ -63,7 +63,7 @@
  mu4e-update-interval 300)             ;; update every 5 minutes
 
 ;; Mu4e key binding
-(global-set-key (kbd "C-x M") 'mu4e)
+(global-set-key (kbd "C-x n") 'mu4e)
 
 ;; message view action
 ;; http://www.brool.com/index.php/using-mu4e
@@ -83,5 +83,4 @@
 
 (add-to-list 'mu4e-view-actions
              '("View in browser" . mu4e-msgv-action-view-in-browser) t)
-(provide 'setup-mu4e)
-))
+(provide 'setup-mu4e))
