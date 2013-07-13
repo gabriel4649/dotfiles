@@ -1,4 +1,5 @@
-(if (featurep 'mu4e) (
+(require 'mu4e)
+
 ;; default
 (setq mu4e-maildir "~/Maildir")
 
@@ -33,7 +34,6 @@
 ;; use imagemagick, if available
 (when (fboundp 'imagemagick-register-types)
   (imagemagick-register-types))
-
 ;; something about ourselves
 (setq
  user-mail-address "gabriel.perez@gatech.edu"
@@ -80,7 +80,7 @@
        "content=\"text/html;charset=UTF-8\">"
        html))
     (browse-url (concat "file://" tmpfile))))
-
 (add-to-list 'mu4e-view-actions
              '("View in browser" . mu4e-msgv-action-view-in-browser) t)
-(provide 'setup-mu4e))
+
+(provide 'setup-mu4e)
