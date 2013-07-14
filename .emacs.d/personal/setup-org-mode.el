@@ -152,10 +152,10 @@
 
 ;; Octopress stuff
 (require 'org-octopress)
-(setq org-octopress-directory-top       "~/coding/octopress/source")
-(setq org-octopress-directory-posts     "~/coding/octopress/source/_posts")
-(setq org-octopress-directory-org-top   "~/coding/octopress/source")
-(setq org-octopress-directory-org-posts "~/coding/octopress/source/blog")
-(setq org-octopress-setup-file          "~/coding/octopress/setupfile.org")
+(setq org-octopress-directory-top       "~/coding/curioso-blog/source")
+(setq org-octopress-directory-posts     "~/coding/curioso-blog/source/_posts")
+(setq org-octopress-directory-org-top   "~/coding/curioso-blog/source")
+(setq org-octopress-directory-org-posts "~/coding/curioso-blog/source/blog")
+(setq org-octopress-setup-file          "~/coding/curioso-blog/setupfile.org")
 
 (provide 'setup-org-mode)

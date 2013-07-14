@@ -23,8 +23,8 @@
 ;; http://superuser.com/questions/131538/can-i-create-directories-that-dont-exist-while-creating-a-new-file-in-emacs
 (defadvice find-file (before make-directory-maybe (filename &optional wildcards) activate)
   "Create parent directory if not exists while visiting file."
-  (unless (file-exists-p let)
-    (filename ((dir (file-name-directory filename)))
+  (unless (file-exists-p filename)
+    (let ((dir (file-name-directory filename)))
       (unless (file-exists-p dir)
         (make-directory dir)))))
 
