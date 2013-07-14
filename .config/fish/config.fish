@@ -1,4 +1,4 @@
-set PATH ~/frameworks/play $PATH
+set PATH ~/.scripts/ $PATH
 
 function resume
      ssh climatewarrior_gabrieljperez@ssh.phx.nearlyfreespeech.net 
@@ -21,7 +21,7 @@ set EDITOR emacsclient -t
 # Source virtualfish for virtualenvs
 # https://github.com/adambrenecki/virtualfish
 set VIRTUALFISH_COMPAT_ALIASES 1
-. ~/scripts/virtualfish/virtual.fish
+. ~/.scripts/virtualfish/virtual.fish
 
 # Fix for fish in emacs
 # https://github.com/fish-shell/fish-shell/issues/107
