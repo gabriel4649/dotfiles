@@ -1,6 +1,7 @@
+#!/bin/bash
+
 size=0;
 tries=0;
-dirs=();
 
 # The maximum size, change this to whatever you want
 limit=10000000
@@ -9,18 +10,24 @@ limit=10000000
 ## another dir if the current one is too big.
 maxtries=20
 
-## While we have not reached the size limit
-while [[ $size -lt $limit ]] ; do
-
 ## Find a random, non-empty directory from the source.
 ## sort -R does a  random sort and head -n 1 prints the first line.
-dir="$(find $1/*/  -not -empty -type d | sort -R | head -n 1)"
+dirs=( $(ls -lR $1 | awk -F: '!($0 ~ ORS "d") && $0 ORS ~ "-" {print $1}' RS= | sort -r) )
+
+COUNTER=0
+
+## While we have not reached the size limit
+while [[ $size -lt $limit ]] && [[ $COUNTER < ${#dirs[@]} ]]; do
+
+dir=${dirs[$COUNTER]}
+#echo $dir
+COUNTER=$((COUNTER + 1))
 
 ## Get this dir's size
 dsize=$(du -s "$dir" | cut -f 1)
 
 ## If this dir does not make us pass the limit
-if [[  $((size + $dsize)) -le $limit ]]; then
+if [[ $((size + $dsize)) -le $limit ]]; then
   echo "Copying $dir" 1>&2
   ## Copy it to target
   cp -r "$dir" $2
@@ -38,8 +45,5 @@ else
 fi
 done;
 
-
-# TODO: Don't copy duplicates
 # TODO: Take limit as parameter
-# TODO: Search deep
 # TODO: Progress bar
