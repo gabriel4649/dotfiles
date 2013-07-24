@@ -1,17 +1,40 @@
 #!/bin/bash
 
+# The default maximum size
+limit=10000000
+
+while getopts "l:" OPTION
+do
+    case $OPTION in
+    l)
+        limit="$OPTARG"
+    ;;
+    [?])
+        echo "Usage: $0 [-l limit] file1 file2" >&2
+        exit 1
+    ;;
+    esac
+done
+
+shift $(($OPTIND-1))
+
+if [ $# -ne 2 ]; then
+    echo "Usage: $0 [-l outfile] file1 file2" >&2
+    exit 1
+fi
+
+src="$1"
+dest="$2"
 size=0;
 tries=0;
-
-# The maximum size, change this to whatever you want
-limit=10000000
 
 ## The maximum number of times we will try to get
 ## another dir if the current one is too big.
 maxtries=20
 
-## Find a random, non-empty directory from the source.
-## sort -R does a  random sort and head -n 1 prints the first line.
+## Find all, non-empty directories from the source that do not contain
+## sub-directories. Put them in random order.
+
 dirs=( $(ls -lR $1 | awk -F: '!($0 ~ ORS "d") && $0 ORS ~ "-" {print $1}' RS= | sort -r) )
 
 COUNTER=0
@@ -19,31 +42,33 @@ COUNTER=0
 ## While we have not reached the size limit
 while [[ $size -lt $limit ]] && [[ $COUNTER < ${#dirs[@]} ]]; do
 
+# Get the next dir from the dirs list
 dir=${dirs[$COUNTER]}
-#echo $dir
+
+# Increase the counter
 COUNTER=$((COUNTER + 1))
 
 ## Get this dir's size
 dsize=$(du -s "$dir" | cut -f 1)
 
 ## If this dir does not make us pass the limit
-if [[ $((size + $dsize)) -le $limit ]]; then
+if [[ $(($size + $dsize)) -le $limit ]]; then
   echo "Copying $dir" 1>&2
   ## Copy it to target
-  cp -r "$dir" $2
+  cp -r "$dir" "$dest"
   ## Add its size to $size
   let size+=$dsize
-  ## If this dir makes us pass the limit
-  ## try $maxtries times to find another that does not
+
+## If this dir makes us pass the limit
+## try $maxtries times to find another that does not
 else
     let tries++;
     if [[ $tries -gt $maxtries ]]; then
-    echo "" 1>&2;
-    echo "Final size =  $size"
-    break;
+        echo "" 1>&2;
+        echo "Final size =  $size"
+        break;
     fi
 fi
 done;
 
-# TODO: Take limit as parameter
 # TODO: Progress bar
