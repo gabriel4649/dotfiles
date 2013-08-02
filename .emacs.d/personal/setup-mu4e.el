@@ -1,4 +1,5 @@
 (require 'mu4e)
+(require 'org-mu4e)
 
 ;; default
 (setq mu4e-maildir "~/Maildir")
@@ -38,6 +39,24 @@
 (setq
  user-mail-address "gabriel.perez@gatech.edu"
  user-full-name  "Gabriel J. Pérez Irizarry")
+
+;; When replying to an email I want to use the address I received this message to as the sender of the reply.
+(add-hook 'mu4e-compose-pre-hook
+          (defun my-set-from-address ()
+            "Set the From address based on the To address of the original."
+            (let ((msg mu4e-compose-parent-message)) ;; msg is shorter...
+              (if msg
+                  (setq user-mail-address
+                        (cond
+                         ((mu4e-message-contact-field-matches msg :to "gabrieljoel@gmail.com")
+                          "gabrieljoel@gmail.com")
+                         ((mu4e-message-contact-field-matches msg :to "gabriel.perez5@upr.edu")
+                          "gabriel.perez5@upr.edu")
+                         ((mu4e-message-contact-field-matches msg :to "gabriel.perez@gatech.edu")
+                          "gabriel.perez@gatech.edu")
+                         ((mu4e-message-contact-field-matches msg :to "freeculture.rum@gmail.com")
+                          "freeculture.rum@gmail.com")
+                         (t "gabriel.perez@gatech.edu")))))))
 
 ;; sending mail -- replace USERNAME with your gmail username
 ;; also, make sure the gnutls command line utils are installed
