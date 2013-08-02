@@ -3,6 +3,6 @@
 (set-scroll-bar-mode nil)
 
 ;; Use Solarized light as the default theme
-(load-theme 'solarized-light t)
+;; (load-theme 'solarized-light t)
 
 (provide 'appearance)
