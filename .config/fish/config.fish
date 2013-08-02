@@ -8,6 +8,10 @@ function curioso_blog
      ssh climatewarrior_curioso@ssh.phx.nearlyfreespeech.net 
 end
 
+function curioso_shop
+     ssh climatewarrior_curioso-shop@ssh.phx.nearlyfreespeech.net 
+end
+
 function cuda
      ssh climatewarrior@136.145.116.227	
 end
