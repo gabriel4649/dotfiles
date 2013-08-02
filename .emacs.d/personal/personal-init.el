@@ -41,11 +41,6 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
-(require 'web-mode)
-;; Disable whitespace-mode when using web-mode
-(add-hook 'web-mode-hook (lambda () (whitespace-mode -1)))
-(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-
 ;; js2 mode
 (autoload 'js2-mode "js2-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
