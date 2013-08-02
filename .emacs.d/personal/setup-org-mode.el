@@ -150,6 +150,12 @@
 (defvar monitor-timer (install-monitor (concat org-mobile-directory "/mobileorg.org") 30)
   "Check if file changed every 30 s.")
 
+;; audio-notes-mode stuff
+(require 'audio-notes-mode)
+(setq anm/notes-directory "~/Ubuntu One/notas-audio")
+(setq anm/goto-file "~/Ubuntu One/org/migtd.org")
+(setq anm/hook-into-org-pull t)
+
 ;; Octopress stuff
 (require 'org-octopress)
 (setq org-octopress-directory-top       "~/coding/curioso-blog/source")
