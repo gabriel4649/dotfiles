@@ -1,5 +1,6 @@
 ;; Take care of extra dependencies
-(prelude-ensure-module-deps '(org org-bullets org-octopress audio-notes-mode))
+(prelude-ensure-module-deps '(org org-bullets org-octopress
+                                  audio-notes-mode calfw))
 
 ;; Set to the location of your Org files on your local system
 (setq org-directory "~/Ubuntu One/org")
@@ -46,7 +47,7 @@
           "TODO"
 	  entry
 	  (file+headline "~/Ubuntu One/org/migtd.org" "Entrando")
-          "* TODO %^{Brief Description} %^g\n%?\nAdded: %U" )
+          "* TODO %^{Brief Description} %^g\n\nAdded: %U" )
 
          ("w"
           "WAITING"
@@ -59,6 +60,18 @@
 	  entry
 	  (file+headline "~/Ubuntu One/org/diario.org" "Entradas")
           "* %^{Title} \nAdded: %U" )
+
+         ("s"
+          "Shopping"
+          checkitem
+	  (file+headline "~/Ubuntu One/org/libreta.org" "Shopping")
+          "[ ] %^{Item} \nAdded: %U" )
+
+         ("r"
+          "Reunion"
+          entry
+	  (file+headline "~/Ubuntu One/org/migtd.org" "Entrando")
+          "* TODO Reunirme con %^{Persona(s) o grupo}  %^G\nSCHEDULED:%^{Date}t\nAdded: %U" )
         ;; ... more templates here ...
 
         )))
@@ -163,5 +176,9 @@
 (setq org-octopress-directory-org-top   "~/coding/curioso-blog/source")
 (setq org-octopress-directory-org-posts "~/coding/curioso-blog/source/blog")
 (setq org-octopress-setup-file          "~/coding/curioso-blog/setupfile.org")
+
+;; We want to activate emacs-calfw
+(require 'calfw-cal)
+(require 'calfw-org)
 
 (provide 'setup-org-mode)
