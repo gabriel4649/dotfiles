@@ -32,13 +32,18 @@
 (setq
  mu4e-view-show-images t
  mu4e-view-image-max-width 800)
+
 ;; use imagemagick, if available
 (when (fboundp 'imagemagick-register-types)
   (imagemagick-register-types))
+
 ;; something about ourselves
 (setq
  user-mail-address "gabriel.perez@gatech.edu"
- user-full-name  "Gabriel J. Pérez Irizarry")
+ user-full-name  "Gabriel J. Pérez Irizarry"
+ message-signature '(progn 
+                    (insert "Hello NSA! :)\n")
+                    (spook)))
 
 ;; When replying to an email I want to use the address I received this message to as the sender of the reply.
 (add-hook 'mu4e-compose-pre-hook
