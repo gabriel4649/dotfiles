@@ -1,5 +1,7 @@
 set PATH ~/.scripts/ $PATH
 
+set PATH ~/frameworks/ $PATH
+
 function resume
      ssh climatewarrior_gabrieljperez@ssh.phx.nearlyfreespeech.net 
 end
