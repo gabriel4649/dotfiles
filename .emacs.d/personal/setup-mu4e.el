@@ -82,6 +82,10 @@
 ;; don't keep message buffers around
 (setq message-kill-buffer-on-exit t)
 
+; Wrap lines
+(add-hook 'mu4e-view-mode-hook
+          'longlines-mode)
+
 (setq
  mu4e-get-mail-command "offlineimap"   ;; or fetchmail, or ...
  mu4e-update-interval 300)             ;; update every 5 minutes
