@@ -72,6 +72,12 @@
           entry
 	  (file+headline "~/Ubuntu One/org/migtd.org" "Entrando")
           "* TODO Reunirme con %^{Persona(s) o grupo}  %^G\nSCHEDULED:%^{Date}t\nAdded: %U" )
+
+         ("e"
+          "Evento"
+          entry
+	  (file+headline "~/Ubuntu One/org/migtd.org" "Eventos")
+          "* %^{Title}  %^G\nSCHEDULED:%^{Date}t\nAdded: %U" )
         ;; ... more templates here ...
 
         )))
