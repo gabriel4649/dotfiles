@@ -78,6 +78,12 @@
           entry
 	  (file+headline "~/Ubuntu One/org/migtd.org" "Eventos")
           "* %^{Title}  %^G\nSCHEDULED:%^{Date}t\nAdded: %U" )
+
+         ("a"
+          "Anti-TODO"
+          entry
+	  (file+headline "~/Ubuntu One/org/migtd.org" "Anti-TODO")
+          "* DONE %^{Title} \nAdded: %U" )
         ;; ... more templates here ...
 
         )))
