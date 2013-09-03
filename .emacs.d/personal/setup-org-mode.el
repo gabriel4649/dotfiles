@@ -177,11 +177,11 @@
 
 ;; Octopress stuff
 (require 'org-octopress)
-(setq org-octopress-directory-top       "~/coding/curioso-blog/source")
-(setq org-octopress-directory-posts     "~/coding/curioso-blog/source/_posts")
-(setq org-octopress-directory-org-top   "~/coding/curioso-blog/source")
-(setq org-octopress-directory-org-posts "~/coding/curioso-blog/source/blog")
-(setq org-octopress-setup-file          "~/coding/curioso-blog/setupfile.org")
+(setq org-octopress-directory-top       "~/coding/personal-blog/source")
+(setq org-octopress-directory-posts     "~/coding/personal-blog/source/_posts")
+(setq org-octopress-directory-org-top   "~/coding/personal-blog/source")
+(setq org-octopress-directory-org-posts "~/coding/personal-blog/source/blog")
+(setq org-octopress-setup-file          "~/coding/personal-blog/setupfile.org")
 
 ;; We want to activate emacs-calfw
 (require 'calfw-cal)
