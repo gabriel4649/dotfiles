@@ -1,6 +1,6 @@
 ;; Take care of extra dependencies
 (prelude-ensure-module-deps '(org org-bullets org-octopress
-                                  audio-notes-mode calfw))
+                                  audio-notes-mode calfw org-present))
 
 ;; Set to the location of your Org files on your local system
 (setq org-directory "~/Ubuntu One/org")
@@ -192,5 +192,17 @@
 ;; We want to activate emacs-calfw
 (require 'calfw-cal)
 (require 'calfw-org)
+
+(autoload 'org-present "org-present" nil t)
+
+(add-hook 'org-present-mode-hook
+          (lambda ()
+            (org-present-big)
+            (org-display-inline-images)))
+
+(add-hook 'org-present-mode-quit-hook
+          (lambda ()
+            (org-present-small)
+            (org-remove-inline-images)))
 
 (provide 'setup-org-mode)
