@@ -14,57 +14,25 @@
 # sudo apt-get update && sudo apt-get install medibuntu-keyring && sudo apt-get update
 #
  
-#*** Extras
- 
-#***Prefernces
- 
-#***Administration
- 
-#***Accessories
- 
-#***Accessories - Search
- 
-#***Accessories - Text
-
-#***Development
-slime - Superior LISP Interaction Mode for Emacs
-
-#***Email 
 mu4e - e-mail client for Emacs based on mu (maildir-utils)
 offlineimap - IMAP/Maildir synchronization and reader support
- 
-#***Games
- 
-#***Graphics
 gimp - The GNU Image Manipulation Program
 inkscape - vector-based drawing program
- 
-##***Internet
 chromium-browser - Chromium browser
-
-#***SABnzb+
- 
-#***Office
- 
-#***Programming
 meld - graphical tool to diff and merge files
-
-#***Python Programming Language
-pylint - python code static checker and UML diagram generator
- 
-#***Sound & Video
-#Add medibuntu.org repo 1st!
- 
-#***Sound & Video - Codecs
- 
-#***Sound & Video - Player
 vlc - multimedia player and streamer
- 
-#***Sound & Video - DVD
- 
-#***Sound & Video - Sound Tools
- 
-#***System Tools
-
-#***World Wide Web
+synaptic - Graphical package manager 
 npm - package manager for Node.js
+emacs24 - GNU Emacs editor (with GTK+ user interface)
+gtk-redshift - Adjusts the color temperature of your screen with GTK+ integration
+caffeine- Caffeine
+htop 
+node
+openjdk-7-jre
+xclip
+git
+gparted
+mongodb
+build-essential
+python-dev
+indicator-cpufreq
