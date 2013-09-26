@@ -1,3 +1,6 @@
+;; Take care of extra dependencies
+(prelude-ensure-module-deps '(solarized-theme))
+
 ; Remove scrollbar
 ; http://emacs-fu.blogspot.com/2009/12/scrolling.html
 (set-scroll-bar-mode nil)
