@@ -36,3 +36,8 @@ mongodb
 build-essential
 python-dev
 indicator-cpufreq
+ant
+python-pip
+ipython
+python-virtualenv
+curl
