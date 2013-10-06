@@ -112,8 +112,8 @@
 (setq org-refile-targets (quote ((nil :maxlevel . 9)
                                  (org-agenda-files :maxlevel . 9))))
 
-; Stop using paths for refile targets - we file directly with IDO
-(setq org-refile-use-outline-path nil)
+; Use IDO for org-mode
+(setq org-completion-use-ido t)
 
 ; Allow refile to create parent tasks with confirmation
 (setq org-refile-allow-creating-parent-nodes (quote confirm))
@@ -125,9 +125,6 @@
   (not (member (nth 2 (org-heading-components)) org-done-keywords)))
 
 (setq org-refile-target-verify-function 'bh/verify-refile-target)
-
-; Targets complete directly with IDO
-(setq org-outline-path-complete-in-steps nil)
 
 ;; PDFs visited in Org-mode are opened in Evince (and not in the default choice) http://stackoverflow.com/a/8836108/789593
 (add-hook 'org-mode-hook
