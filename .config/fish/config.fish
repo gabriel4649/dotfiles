@@ -2,6 +2,10 @@ set PATH ~/.scripts/ $PATH
 
 set PATH ~/frameworks/ $PATH
 
+# Make Android stuff available
+set PATH ~/frameworks/android-sdk-linux/tools $PATH
+set PATH ~/frameworks/android-sdk-linux/platform-tools $PATH
+
 function resume
      ssh climatewarrior_gabrieljperez@ssh.phx.nearlyfreespeech.net 
 end
