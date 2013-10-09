@@ -27,8 +27,12 @@ emacs24 - GNU Emacs editor (with GTK+ user interface)
 gtk-redshift - Adjusts the color temperature of your screen with GTK+ integration
 caffeine- Caffeine
 htop 
-node
+nodejs
 openjdk-7-jre
+openjdk-7-jdk
+openjdk-7-doc
+openjdk-7-source
+icedtea7-plugin
 xclip
 git
 gparted
@@ -41,3 +45,8 @@ python-pip
 ipython
 python-virtualenv
 curl
+texlive-latex-recommended
+texlive-latex-extra
+mplayer
+aspell-es
+ia32-libs
