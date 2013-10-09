@@ -1,5 +1,5 @@
 ;; Take care of extra dependencies
-(prelude-ensure-module-deps '(js2-mode auto-complete multiple-cursors web-mode
+(prelude-ensure-module-deps '(js2-mode auto-complete multiple-cursors
                                        zencoding-mode minimap jedi))
 
 ;;; Add extra emacs modules to load path
