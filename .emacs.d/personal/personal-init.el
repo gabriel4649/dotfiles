@@ -1,5 +1,5 @@
 ;; Take care of extra dependencies
-(prelude-ensure-module-deps '(js2-mode auto-complete multiple-cursors
+(prelude-ensure-module-deps '(auto-complete multiple-cursors
                                        zencoding-mode minimap jedi))
 
 ;;; Add extra emacs modules to load path
@@ -40,10 +40,6 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
-
-;; js2 mode
-(autoload 'js2-mode "js2-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
 ;; Arduino stuff
 (setq auto-mode-alist (cons '("\\.\\(pde\\|ino\\)$" . arduino-mode) auto-mode-alist))
