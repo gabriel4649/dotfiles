@@ -1,6 +1,6 @@
 ;; Take care of extra dependencies
 (prelude-ensure-module-deps '(auto-complete multiple-cursors
-                                       zencoding-mode minimap jedi))
+                                            zencoding-mode minimap))
 
 ;;; Add extra emacs modules to load path
 ;;;; http://stackoverflow.com/questions/221365/emacs-lisp-how-to-add-a-folder-and-all-its-first-level-sub-folders-to-the-load
@@ -45,8 +45,8 @@
 (require 'zencoding-mode)
 ;(add-hook 'sgml-mode-hook 'zencoding-mode) ;; Auto-start on any markup modes
 
-(autoload 'jedi:setup "jedi" nil t)
-(setq jedi:setup-keys t)
-(add-hook 'python-mode-hook 'jedi:setup)
+; Ediff setup split windows
+(setq ediff-split-window-function 'split-window-horizontally
+      ediff-window-setup-function 'ediff-setup-windows-plain)
 
 (provide 'personal-init)
