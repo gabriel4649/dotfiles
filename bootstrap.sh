@@ -5,6 +5,7 @@ function doIt() {
     rsync --exclude ".git/" --exclude "README.org" --exclude "bootstrap.sh" \
         --exclude "packages.list" --exclude "LICENSE-GPL.txt" \
         --exclude "cleanstart-repos.sh" \
+        --exclude ".gitignore" \
         --exclude "cleanstart-packages.list.sh" -av --no-perms . ~
 }
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
