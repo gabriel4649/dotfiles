@@ -1,8 +1,6 @@
 [user]
 	email = gabrieljoel@gmail.com
 	name = Gabriel J. Pérez Irizarry
-[diff]
-	external = ~/.diff.py
 [push]
 	default = simple
 # http://stackoverflow.com/questions/10355902/use-emacsclient-t-when-committing-in-git 
