@@ -20,10 +20,6 @@
 ; Capture key
 (define-key global-map "\C-cc" 'org-capture)
 
-; Org-mode key maps
-(define-key global-map "\C-cl" 'org-store-link)
-(define-key global-map "\C-ca" 'org-agenda)
-
 ; Activate org-bullets
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
