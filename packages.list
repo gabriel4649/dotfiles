@@ -8,24 +8,20 @@
 #
 ################################################################################
  
-# Add Repositories before you start
-# Add medibuntu.org repo 1st!
-# sudo wget http://www.medibuntu.org/sources.list.d/lucid.list --output-document=/etc/apt/sources.list.d/medibuntu.list
-# sudo apt-get update && sudo apt-get install medibuntu-keyring && sudo apt-get update
-#
+# Add Repositories before you start!
  
-mu4e - e-mail client for Emacs based on mu (maildir-utils)
-offlineimap - IMAP/Maildir synchronization and reader support
-gimp - The GNU Image Manipulation Program
-inkscape - vector-based drawing program
-chromium-browser - Chromium browser
-meld - graphical tool to diff and merge files
-vlc - multimedia player and streamer
-synaptic - Graphical package manager 
-npm - package manager for Node.js
-emacs24 - GNU Emacs editor (with GTK+ user interface)
-gtk-redshift - Adjusts the color temperature of your screen with GTK+ integration
-caffeine- Caffeine
+mu4e 
+offlineimap 
+gimp 
+inkscape 
+chromium
+meld 
+vlc 
+synaptic 
+npm 
+emacs24 
+gtk-redshift
+caffeine
 htop 
 nodejs
 openjdk-7-jre
@@ -50,3 +46,4 @@ texlive-latex-extra
 mplayer
 aspell-es
 ia32-libs
+gufw
