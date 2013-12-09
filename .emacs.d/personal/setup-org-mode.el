@@ -172,7 +172,7 @@
 (require 'audio-notes-mode)
 (setq anm/notes-directory "~/Ubuntu One/notas-audio")
 (setq anm/goto-file "~/Ubuntu One/org/migtd.org")
-(setq anm/hook-into-org-pull t)
+(setq anm/hook-into-org-pull nil)
 
 ;; Octopress stuff
 (require 'org-octopress)
