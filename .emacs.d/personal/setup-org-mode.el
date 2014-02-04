@@ -28,6 +28,9 @@
 ; http://orgmode.org/worg/org-contrib/org-protocol.html
 (require 'org-protocol)
 
+;; Enable extra export backends
+'(org-export-backends (quote (ascii html icalendar latex md odt)))
+
 ; Capture templates
 ; http://orgmode.org/worg/org-contrib/org-protocol.html#sec-6-1-1
 (setq org-capture-templates
@@ -76,8 +79,8 @@
           "* %^{Title}  %^G\nSCHEDULED:%^{Date}t\nAdded: %U" )
 
          ("a"
-          "Anti-TODO"
-          entry
+          "Anti-entry"
+          TODO
 	  (file+headline "~/Ubuntu One/org/migtd.org" "Anti-TODO")
           "\n\n* DONE %?\nSCHEDULED: <%(org-read-date nil nil \"+0d\")>")
         ;; ... more templates here ...
