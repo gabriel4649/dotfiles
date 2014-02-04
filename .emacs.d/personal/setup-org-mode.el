@@ -79,7 +79,7 @@
           "Anti-TODO"
           entry
 	  (file+headline "~/Ubuntu One/org/migtd.org" "Anti-TODO")
-          "* DONE %^{Title} \nAdded: %U" )
+          "\n\n* DONE %?\nSCHEDULED: <%(org-read-date nil nil \"+0d\")>")
         ;; ... more templates here ...
 
         )))
