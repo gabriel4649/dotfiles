@@ -1,5 +1,5 @@
 ;; Take care of extra dependencies
-(prelude-ensure-module-deps '(org org-bullets org-octopress
+(prelude-ensure-module-deps '(org org-bullets org-octopress org-pomodoro
                                   audio-notes-mode calfw org-present))
 
 ;; Set to the location of your Org files on your local system
