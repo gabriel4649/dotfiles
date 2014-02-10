@@ -79,8 +79,8 @@
           "* %^{Title}  %^G\nSCHEDULED:%^{Date}t\nAdded: %U" )
 
          ("a"
-          "Anti-entry"
-          TODO
+          "Anti-todo"
+          entry
 	  (file+headline "~/Ubuntu One/org/migtd.org" "Anti-TODO")
           "\n\n* DONE %?\nSCHEDULED: <%(org-read-date nil nil \"+0d\")>")
         ;; ... more templates here ...
