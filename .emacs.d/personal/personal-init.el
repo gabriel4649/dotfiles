@@ -36,10 +36,6 @@
 (setq auto-mode-alist (cons '("\\.\\(pde\\|ino\\)$" . arduino-mode) auto-mode-alist))
 (autoload 'arduino-mode "arduino-mode" "Arduino editing mode." t)
 
-; Activate minimap
-; http://www.emacswiki.org/emacs/MiniMap
-(require 'minimap)
-
 ; Activate zencoding
 ; https://github.com/rooney/zencoding
 (require 'zencoding-mode)
