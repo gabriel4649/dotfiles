@@ -8,9 +8,6 @@
 (setq mu4e-sent-folder   "/Sent")
 (setq mu4e-trash-folder  "/Trash")
 
-;; don't save message to Sent Messages, Gmail/IMAP takes care of this
-(setq mu4e-sent-messages-behavior 'delete)
-
 ;; setup some handy shortcuts
 ;; you can quickly switch to your Inbox -- press ``ji''
 ;; then, when you want archive some messages, move them to
@@ -44,7 +41,7 @@
  message-signature
  (concat
   "If possible please communicate with me using PGP encryption to avoid snooping"
-  "by third parties. PGP Key ID: 6F769FFD"))
+  " by third parties. PGP Key ID: 6F769FFD"))
 
 ;; When replying to an email I want to use the address I received this message to as the sender of the reply.
 (add-hook 'mu4e-compose-pre-hook
@@ -81,8 +78,12 @@
       smtpmail-queue-mail  nil
       smtpmail-queue-dir  "~/Maildir/queue/cur")
 
-;; don't keep message buffers around
-(setq message-kill-buffer-on-exit t)
+
+(setq message-kill-buffer-on-exit t ;; don't keep message buffers around
+      mu4e-compose-dont-reply-to-self t ;; don't reply to myself
+      mu4e-use-fancy-chars t ; use fancy characters
+      )
+
 
 ; Wrap lines
 (add-hook 'mu4e-view-mode-hook
