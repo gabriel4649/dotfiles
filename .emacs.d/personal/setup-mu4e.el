@@ -1,6 +1,16 @@
 (require 'mu4e)
 (require 'org-mu4e)
 
+;; Run IMAP filter
+(add-hook 'mu4e-update-pre-hook 'etc/imapfilter)
+(defun etc/imapfilter ()
+  (message "Running imapfilter...")
+  (with-current-buffer (get-buffer-create " *imapfilter*")
+    (goto-char (point-max))
+    (insert "---\n")
+    (call-process "imapfilter" nil (current-buffer) nil "-v"))
+  (message "Running imapfilter...done"))
+
 ;; default
 (setq mu4e-maildir "~/Maildir")
 
