@@ -3,7 +3,7 @@
 (require 'habitrpg)
 
 (add-hook 'org-after-todo-state-change-hook 'habitrpg-add 'append)
-(add-hook 'org-capture-before-finalize-hook'habitrpg-add 'append)
+;;(add-hook 'org-capture-before-finalize-hook'habitrpg-add 'append)
 ;; For adding tasks from org mode
 (global-set-key (kbd "C-c C-x h") 'habitrpg-add)
 ;; Status buffer - use C-h m to see the keybindings
