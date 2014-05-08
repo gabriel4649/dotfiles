@@ -24,6 +24,9 @@
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
+;; Activate habit
+(require 'org-habit)
+
 ; Activate org protocol
 ; http://orgmode.org/worg/org-contrib/org-protocol.html
 (require 'org-protocol)
