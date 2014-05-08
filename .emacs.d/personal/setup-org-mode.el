@@ -15,7 +15,7 @@
 (setq org-mobile-inbox-for-pull "~/Ubuntu One/org/flagged.org")
 
 ;; Setup the mobile directory
-(setq org-mobile-directory "~/Ubuntu One/MobileOrg")
+(setq org-mobile-directory "~/Dropbox/MobileOrg")
 
 ; Capture key
 (define-key global-map "\C-cc" 'org-capture)
@@ -174,7 +174,7 @@
 
 ;; audio-notes-mode stuff
 (require 'audio-notes-mode)
-(setq anm/notes-directory "~/Ubuntu One/notas-audio")
+(setq anm/notes-directory "~/Dropbox/notas-audio")
 (setq anm/goto-file "~/Ubuntu One/org/migtd.org")
 (setq anm/hook-into-org-pull nil)
 
