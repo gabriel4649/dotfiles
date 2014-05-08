@@ -3,16 +3,16 @@
                                   audio-notes-mode calfw org-present))
 
 ;; Set to the location of your Org files on your local system
-(setq org-directory "~/Ubuntu One/org")
+(setq org-directory "~/Personal/org")
 
 ; Set agenda files
-(setq org-agenda-files (file-expand-wildcards "~/Ubuntu One/org/*.org"))
+(setq org-agenda-files (file-expand-wildcards "~/Personal/org/*.org"))
 
 ; Set file for capture mode
-(setq org-default-notes-file "~/Ubuntu One/org/capture.org")
+(setq org-default-notes-file "~/Personal/org/capture.org")
 
 ;; Set to the name of the file where new notes will be stored
-(setq org-mobile-inbox-for-pull "~/Ubuntu One/org/flagged.org")
+(setq org-mobile-inbox-for-pull "~/Personal/org/flagged.org")
 
 ;; Setup the mobile directory
 (setq org-mobile-directory "~/Dropbox/MobileOrg")
@@ -38,50 +38,50 @@
        (("i"
          "Internet"
          entry
-         (file+headline "~/Ubuntu One/org/capture.org" "Notes")
+         (file+headline "~/Personal/org/capture.org" "Notes")
          "* %^{Title} %u, %c\n\n  %i"
          :empty-lines 1)
 
          ("t"
           "TODO"
 	  entry
-	  (file+headline "~/Ubuntu One/org/migtd.org" "Entrando")
+	  (file+headline "~/Personal/org/migtd.org" "Entrando")
           "* TODO %^{Brief Description} %^g\n\nAdded: %U" )
 
          ("w"
           "WAITING"
 	  entry
-	  (file+headline "~/Ubuntu One/org/migtd.org" "Esperando")
+	  (file+headline "~/Personal/org/migtd.org" "Esperando")
           "* WAITING %^{Brief Description} %^g\n%?\nAdded: %U" )
 
          ("d"
           "diario"
 	  entry
-	  (file+headline "~/Ubuntu One/org/diario.org" "Entradas")
+	  (file+headline "~/Personal/org/diario.org" "Entradas")
           "* %^{Title} \nAdded: %U" )
 
          ("s"
           "Shopping"
           checkitem
-	  (file+headline "~/Ubuntu One/org/libreta.org" "Shopping")
+	  (file+headline "~/Personal/org/libreta.org" "Shopping")
           "[ ] %^{Item} \nAdded: %U" )
 
          ("r"
           "Reunion"
           entry
-	  (file+headline "~/Ubuntu One/org/migtd.org" "Entrando")
+	  (file+headline "~/Personal/org/migtd.org" "Entrando")
           "* TODO Reunirme con %^{Persona(s) o grupo}  %^G\nSCHEDULED:%^{Date}t\nAdded: %U" )
 
          ("e"
           "Evento"
           entry
-	  (file+headline "~/Ubuntu One/org/migtd.org" "Eventos")
+	  (file+headline "~/Personal/org/migtd.org" "Eventos")
           "* %^{Title}  %^G\nSCHEDULED:%^{Date}t\nAdded: %U" )
 
          ("a"
           "Anti-todo"
           entry
-	  (file+headline "~/Ubuntu One/org/migtd.org" "Anti-TODO")
+	  (file+headline "~/Personal/org/migtd.org" "Anti-TODO")
           "\n\n* DONE %?\nSCHEDULED: <%(org-read-date nil nil \"+0d\")>")
         ;; ... more templates here ...
 
@@ -175,7 +175,7 @@
 ;; audio-notes-mode stuff
 (require 'audio-notes-mode)
 (setq anm/notes-directory "~/Dropbox/notas-audio")
-(setq anm/goto-file "~/Ubuntu One/org/migtd.org")
+(setq anm/goto-file "~/Personal/org/migtd.org")
 (setq anm/hook-into-org-pull nil)
 
 ;; Octopress stuff
