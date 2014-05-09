@@ -10,9 +10,6 @@
  
 # Add Repositories before you start!
  
-mu4e 
-offlineimap 
-html2text
 gimp 
 inkscape 
 chromium
@@ -20,7 +17,7 @@ meld
 vlc 
 synaptic 
 npm 
-emacs24 
+emacs-snapshot 
 gtk-redshift
 caffeine
 htop 
@@ -59,3 +56,4 @@ cheese
 nautilus-image-converter
 imapfilter
 slurm
+ack-grep
