@@ -13,7 +13,7 @@
 (require 'sublimity)
 (require 'sublimity-scroll)
 ;; (require 'sublimity-map)
-(require 'sublimity-attractive)
+;; (require 'sublimity-attractive)
 (sublimity-mode 1)
 
 (provide 'appearance)
