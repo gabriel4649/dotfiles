@@ -12,7 +12,7 @@
  
 gimp 
 inkscape 
-chromium
+chromium-browser
 meld 
 vlc 
 synaptic 
@@ -26,7 +26,7 @@ openjdk-7-jre
 openjdk-7-jdk
 openjdk-7-doc
 openjdk-7-source
-icedtea7-plugin
+icedtea-7-plugin
 xclip
 git
 gparted
@@ -43,17 +43,22 @@ texlive-latex-recommended
 texlive-latex-extra
 mplayer
 aspell-es
-ia32-libs
 gufw
 fdupes
 p7zip-full
 unrar
 wine
 audacity
-ffmpeg
+libav-tools
 picard
 cheese  
 nautilus-image-converter
 imapfilter
 slurm
 ack-grep
+fish
+anki
+gwaei
+ibus-anthy
+virtualbox-qt
+virtualbox-guest-additions-iso
