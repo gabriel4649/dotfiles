@@ -2,8 +2,8 @@
 (prelude-ensure-module-deps '(solarized-theme sublimity))
 
 ;  Remove scrollbar
-; http://emacs-fu.blogspot.com/2009/12/scrolling.html
-(set-scroll-bar-mode nil)
+(scroll-bar-mode -1)
+(horizontal-scroll-bar-mode -1)
 
 ;; Use Solarized light as the default theme
 ;; (load-theme 'solarized-light t)
