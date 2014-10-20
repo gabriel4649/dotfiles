@@ -1,5 +1,5 @@
 #! /bin/bash
- 
+
 ################################################################################
 # cleanstart-packages.list.sh
 # by silverwav - OpenPGP key:03187548 15 Apr 2009
@@ -39,7 +39,7 @@ clear
 echo "--------------------------------------------------------------------------------"
 echo "                 (cleanstart) Script for installing packages (client)                 "
 echo "--------------------------------------------------------------------------------"
- 
+
 # ensure script is run as root/sudo
 if [ "$(id -u)" != "0" ]
 then
@@ -48,7 +48,7 @@ then
     echo "--------------------------------------------------------------------------------"
     exit 1
 fi
- 
+
 # check the argument count
 if [ $# -gt "1" ]
 then
@@ -57,16 +57,16 @@ then
     echo "--------------------------------------------------------------------------------"
     exit 1
 fi
- 
+
 ################################################################################
 #### Main
 #### args: (1)
 #### 1. [out] List of input package names
 ################################################################################
- 
+
 # package names to be installed
 PACKAGE_NAME_LIST=""
- 
+
 # check if filename was supplied as comand line parameter
 if [ $# -eq "1" ]
 then
@@ -74,13 +74,13 @@ then
 else
     PACKAGE_NAME_LIST=$(cat packages.list | grep -v -e "^#" | cut -f1 -d' ')
 fi
- 
+
 echo ""
 echo "Installing packages:" ${PACKAGE_NAME_LIST}
 echo "--------------------------------------------------------------------------------"
- 
+
 apt-get install -y ${PACKAGE_NAME_LIST}
- 
+
 echo ""
 echo "Done"
 echo "--------------------------------------------------------------------------------"
