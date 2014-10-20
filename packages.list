@@ -10,7 +10,8 @@
  
 # Add Repositories before you start!
  
-gimp 
+gimp
+gimp-plugin-registry
 inkscape 
 chromium-browser
 meld 
@@ -53,7 +54,6 @@ libav-tools
 picard
 cheese  
 nautilus-image-converter
-imapfilter
 slurm
 ack-grep
 fish
