@@ -1,6 +1,7 @@
 ;; Take care of extra dependencies
 (prelude-ensure-module-deps '(auto-complete multiple-cursors
-                                            zencoding-mode minimap))
+                                            zencoding-mode minimap
+                                            discover-my-major))
 
 ;;; Add extra emacs modules to load path
 ;;;; http://stackoverflow.com/questions/221365/emacs-lisp-how-to-add-a-folder-and-all-its-first-level-sub-folders-to-the-load
@@ -18,6 +19,9 @@
 (global-set-key (kbd "C-c q") 'auto-fill-mode)
 ; Turn on auto-fill automatically for org-mode files
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
+
+;; Add key-binding for discover-my-major
+(global-set-key (kbd "C-h C-m") 'discover-my-major)
 
 ;; Global auto-complete
 (require 'auto-complete)
