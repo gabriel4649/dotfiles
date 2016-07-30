@@ -1,5 +1,4 @@
 #!/bin/bash
-sudo add-apt-repository ppa:ubuntu-elisp/ppa
-sudo add-apt-repository ppa:caffeine-developers/ppa
-sudo add-apt-repository ppa:fossfreedom/byzanz
-wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+sudo add-apt-repository ppa:ubuntu-elisp/ppa # Emacs
+wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh # Heroku
+sudo add-apt-repository ppa:tualatrix/ppa # Ubuntu Tweak
