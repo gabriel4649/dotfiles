@@ -58,7 +58,8 @@ slurm
 ack-grep
 fish
 anki
-gwaei
 ibus-anthy
 virtualbox-qt
 virtualbox-guest-additions-iso
+font-manager
+openssl
