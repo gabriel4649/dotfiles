@@ -1,6 +1,6 @@
 ;; Take care of extra dependencies
 (prelude-ensure-module-deps '(auto-complete multiple-cursors
-                                            zencoding-mode minimap
+                                            zencoding-mode
                                             discover-my-major))
 
 ;;; Add extra emacs modules to load path
