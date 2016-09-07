@@ -1,0 +1,3 @@
+Auto install Prelude
+
+Add emacs --daemon to auto-start on boot. This can be done the easy way (via “Settings > Session and Startup > Application Autostart”) 
