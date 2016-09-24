@@ -1,5 +1,10 @@
 function emacs
 	emacsclient -t $argv
+end
+
+function emacs-restart
+         killall emacs
+         /usr/bin/emacs --daemon
 end 
 
 set EDITOR emacsclient -t
