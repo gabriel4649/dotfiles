@@ -10,18 +10,19 @@
  
 # Add Repositories before you start!
 
-gimp
-inkscape 
-chromium-browser
-synaptic 
-htop 
-xclip
-git
-gparted
-python-pip
-mplayer
-aspell-es
-fish
-anki
+gimp # Photo editing
+inkscape # Vector editing
+chromium-browser # Chromium apps, Google Hangouts, testing
+synaptic # Dev package install
+htop # lightweight load viewer
+git # Version control
+gparted # Partition manager
+python-pip # Python package manager
+mplayer # Anki multimedia
+aspell-es # Emacs Spanish spellcheck
+fish # Fish shell
+anki # Learning Japanese
+ffmpeg # Command line video editing utilities 
+
 
 
