@@ -3,6 +3,3 @@
 	name = Gabriel J. Pérez Irizarry
 [push]
 	default = simple
-# http://stackoverflow.com/questions/10355902/use-emacsclient-t-when-committing-in-git 
-[core]
-	editor = emacsclient -t -a=\\\"\\\"
