@@ -38,12 +38,13 @@ values."
      php
      html
      python
+     javascript
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(centered-window-mode all-the-icons)
+   dotspacemacs-additional-packages '(all-the-icons)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(vi-tilde-fringe)
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -252,9 +253,6 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-
-  (require 'centered-window-mode)
-  (centered-window-mode t)
 
   (setq neo-theme 'icons)
 
