@@ -10,6 +10,7 @@
  
 # Add Repositories before you start!
 
+ack # Source code grep
 gimp # Photo editing
 inkscape # Vector editing
 chromium-browser # Chromium apps, Google Hangouts, testing
