@@ -3,3 +3,5 @@
 	name = Gabriel J. Pérez Irizarry
 [push]
 	default = simple
+[merge]
+	ff = false
