@@ -51,7 +51,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(all-the-icons)
+   dotspacemacs-additional-packages '(all-the-icons less-css-mode)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(vi-tilde-fringe)
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
